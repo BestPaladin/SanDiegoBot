@@ -36,7 +36,7 @@ client.on("message", message => {
   }
 })
 
-client.on('guildMemberAdd', member => {
+client.on('guildMemberAdd', async member => {
   console.log(member.user.username + ' a rejoins le serveur')
   
     const embed = new Discord.RichEmbed()
