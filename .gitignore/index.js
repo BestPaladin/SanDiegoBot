@@ -1,14 +1,14 @@
 const Discord = require('discord.js');
-var bot = new Discord.Client();
+var client = new Discord.Client();
 
-bot.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
 
-bot.on("ready", () => {
+client.on("ready", () => {
   console.log("Le bot de SanDiego est allumé !");
-  bot.user.setActivity("GTA ONLINE RP PS4");
+  client.user.setActivity("GTA ONLINE RP PS4");
 });
 
-bot.on('message', function (message) {
+client.on('message', function (message) {
   if (message.content == "!règles") {
   	message.delete();
     const embed = new Discord.MessageEmbed()
@@ -31,7 +31,7 @@ bot.on('message', function (message) {
   }
 });
 
-bot.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", member => {
   const channel = member.guild.channels.cache.find(ch => ch.name === 'arrivés');
   if (!channel) return;
   const embed = new Discord.MessageEmbed()
