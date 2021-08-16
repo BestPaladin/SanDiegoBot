@@ -33,6 +33,13 @@ client.on("message", message => {
       .addField(':no_entry: D\'avoir un pseudo similaire à une personne connue IRL', '\u200b')
       .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
     message.channel.send({embed})
-    message.react("✔")
   }
 })
+
+client.on('guildMemberAdd', member => {
+    const embed = new Discord.RichEmbed()
+      .setTitle('Bienvenue à l\'aéroport de San Diego City, ' + member.user.username + ' !')
+      .setColor('#006eff')
+      .setThumbnail(member.user.avatarURL);
+    member.guild.channels.get('channelID').send({embed}); 
+});
