@@ -18,7 +18,7 @@ client.on("message", message => {
     
     const embed = new Discord.RichEmbed()
       .setTitle("Réglement officiel du serveur discord")
-      .setColor(#006eff)
+      .setColor('#006eff')
       .setDescription("Lors de la navigation dans l'enceinte du serveur, le joueur s'engage à avoir lu ce réglement.")
       .setFooter("Merci de valider ci-dessous le réglement.")
       .addField(':no-entry: De spams', '\u200b')
