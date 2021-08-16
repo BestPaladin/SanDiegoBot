@@ -33,5 +33,6 @@ client.on("message", message => {
       .addField(':no_entry: D\'avoir un pseudo similaire à une personne connue IRL', '\u200b')
       .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
     message.channel.send({embed})
+    message.react("✔")
   }
 })
