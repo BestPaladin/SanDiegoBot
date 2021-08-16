@@ -21,7 +21,7 @@ client.on("message", message => {
       .setColor('#006eff')
       .setDescription("Lors de la navigation dans l'enceinte du serveur, le joueur s'engage à avoir lu ce réglement.")
       .setFooter("Merci de valider ci-dessous le réglement.")
-      .addField(':no-entry: De spams', '\u200b')
+      .addField(':no_entry: De spams', '\u200b')
       .addField(':no_entry: De donner des informations personnelles', '\u200b')
       .addField(':no_entry: De faire du forcing IRL', '\u200b')
       .addField(':no_entry: D\'insulter', '\u200b')
