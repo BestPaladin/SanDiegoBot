@@ -37,6 +37,8 @@ client.on("message", message => {
 })
 
 client.on('guildMemberAdd', member => {
+  console.log(member.user.username + ' a rejoins le serveur')
+  
     const embed = new Discord.RichEmbed()
       .setTitle('Bienvenue à l\'aéroport de San Diego City, ' + member.user.username + ' !')
       .setColor('#006eff')
