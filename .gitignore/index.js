@@ -5,7 +5,7 @@ bot.login(process.env.BOT_TOKEN);
 
 bot.on("ready", () => {
   console.log("Le bot de SanDiego est allumé !");
-  bot.user.setActivity("Serveur en développement");
+  bot.user.setActivity("GTA ONLINE RP PS4");
 });
 
 bot.on('message', function (message) {
