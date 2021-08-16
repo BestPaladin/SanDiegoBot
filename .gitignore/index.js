@@ -28,6 +28,7 @@ bot.on('message', function (message) {
 		  .addField(':no-entry: D\'avoir un pseudo similaire à une personne connue IRL', ' ')
 		  .setFooter('Merci de valider ci-dessous le réglement.');
     message.channel.send(embed);
+  }
 });
 
 bot.on("guildMemberAdd", member => {
