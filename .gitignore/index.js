@@ -41,5 +41,5 @@ client.on('guildMemberAdd', member => {
       .setTitle('Bienvenue à l\'aéroport de San Diego City, ' + member.user.username + ' !')
       .setColor('#006eff')
       .setThumbnail(member.user.avatarURL);
-    member.guild.channels.get('channelID').send({embed}); 
+    member.guild.channels.get('876654952360054826').send({embed}); 
 });
