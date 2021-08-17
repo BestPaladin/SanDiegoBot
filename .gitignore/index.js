@@ -16,7 +16,7 @@ client.on("message", message => {
       message.channel.send("Pong ! :ping_pong:");
       break;
     case 'sd!regles':
-      const embed = new Discord.RichEmbed()
+      const embed_rules = new Discord.RichEmbed()
         .setTitle("Réglement officiel du serveur discord")
         .setColor('#006eff')
         .setDescription("Lors de la navigation dans l'enceinte du serveur, le joueur s'engage à avoir lu ce réglement.")
@@ -32,17 +32,17 @@ client.on("message", message => {
         .addField(':no_entry: D\'avoir un pseudo similaire à un staff', '\u200b')
         .addField(':no_entry: D\'avoir un pseudo similaire à une personne connue IRL', '\u200b')
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
-      message.channel.send({embed})
+      message.channel.send({embed_rules})
       break;
     case 'sd!help': 
-      const embed = new Discord.RichEmbed()
+      const embed_help = new Discord.RichEmbed()
         .setTitle("Page d'aide | Bot privé SanDiego")
         .setColor('#006eff')
         .addField('sd!help', 'Affiche la page d\'aide du bot.')
         .addField('sd!ping', 'Vérifie l\'état du bot.')
         .addField('sd!regles', 'Affiche le réglement du serveur discord.')
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
-      message.channel.send({embed})
+      message.channel.send({embed_help})
       break;
     default:
       break;
