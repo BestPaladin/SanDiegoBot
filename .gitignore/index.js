@@ -46,6 +46,16 @@ client.on("message", message => {
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send(embed_help)
       break;
+    case 'sd!create':
+      base('Table 1').create([
+      {
+       "fields": {
+         "Id": message.author.id,
+         "name": null,
+         "age": null
+       }
+      }
+      }], function(err, records) { if (err) { console.error(err); return; } records.forEach(function (record) { console.log(record.getId()); });  });
     default:
       break;
   }
