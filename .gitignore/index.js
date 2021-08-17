@@ -41,7 +41,6 @@ client.on("message", message => {
 client.on("guildMemberAdd", member => {
 
   console.log(member.user.username + " a rejoins le serveur !");
-  console.log(member.user.avatarUrl);
   let bvn = client.channels.get('876654952360054826');
 
   var emb = new Discord.RichEmbed()
@@ -49,8 +48,8 @@ client.on("guildMemberAdd", member => {
       .setTitle('Bienvenue à l\'aéroport de San Diego City, ' + member.user.username + ' !')
       .addField('Merci de valider le réglement dans le salon <#876442912089595956> puis de répondre à mes questions !', '\u200b');
   
-  if (typeof member.user.avatarURL !== 'undefined') emb.setThumbnail(member.user.avatarURL);
-  else emb.setThumbnail('https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png');
+  if (member.user.avatarURL !== 'undefined') { emb.setThumbnail(member.user.avatarURL); }
+  else { emb.setThumbnail('https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png'); }
   
   bvn.send(emb);
 
