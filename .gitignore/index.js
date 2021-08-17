@@ -56,7 +56,8 @@ client.on("guildMemberAdd", member => {
   let bvn = client.channels.get(process.env.JOIN_CHANNEL);
   var embed_join = new Discord.RichEmbed()
       .setColor('#006eff')
-      .setTitle('Bienvenue à l\'aéroport de San Diego City, <@' + member.user.id + '> !')
+      .setTitle('Bienvenue à l\'aéroport de San Diego City, ' + member.user.username + ' !')
+      .setDescription('Soyez le bienvenue sur le serveur discord de SanDiegoCity !\nAvant de commencer l\'aventure, merci de valider le <#877117299562270800> et de répondre à mes questions !')
       .setThumbnail(member.user.avatarURL);
   bvn.send(embed_join);
 });
