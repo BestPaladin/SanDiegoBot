@@ -9,6 +9,9 @@
   "author": "BestPaladin",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "discord.js": "^11.4.2",
+    "airtable": "^0.7.2",
+    "express": "^4.17.1",
+    "require": "^2.4.20"
   }
 }
