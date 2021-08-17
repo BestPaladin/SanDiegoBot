@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var fs = require('fs')
+var Airtable = require('airtable');
+var base = new Airtable({apiKey: process.env.API_KEY}).base('appztkTlB3909ohOS');
 
 client.once('ready', () => {
   console.log("Le bot de SanDiego est allumé !");
@@ -37,17 +38,7 @@ client.on("message", message => {
     case 'sd!create': 
       var username = 'example'
       message.channel.send("ok");
-      var json = 'username' + username;
-      fs.writeFile("users/BestPaladin.json", JSON.stringify(json), function (erreur) {
-        if (erreur) {
-          console.log(erreur)
-        }
-      });
-//       fs.readFile('users/BestPaladin.json', function (err, data) {
-//          var json = JSON.parse(data);
-//          json.push('username: ' + username);
-//          fs.writeFile("users/BestPaladin.json", JSON.stringify(json));
-//       });
+      
       break;
     default:
       break;
