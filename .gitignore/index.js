@@ -60,6 +60,7 @@ client.on("guildMemberAdd", member => {
       .setDescription('Soyez le bienvenue sur le serveur discord de SanDiegoCity !\nAvant de commencer l\'aventure, merci de valider le <#877117299562270800> et de répondre à mes questions !')
       .setThumbnail(member.user.avatarURL);
   bvn.send(embed_join);
+  member.user.send("Salut ! Avant d'entrer dans le serveur, tu dois répondre à plusieurs questions :smile: !");
 });
 
 
