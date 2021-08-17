@@ -11,7 +11,7 @@ client.once('ready', () => {
 client.login(process.env.BOT_TOKEN);
 
 client.on("message", message => {
-  if(message.content.startsWith('sd!')) console.log("L'utilisateur " + message.author.username + " a executé la commande " + message.content);
+  if(message.content.startsWith('sd!')) console.log("L'utilisateur " + message.author.username + " a executé la commande " + message.content + ".");
   
   switch(message.content) {
     case 'sd!ping':
