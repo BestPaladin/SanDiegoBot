@@ -41,6 +41,7 @@ client.on("message", message => {
 client.on("guildMemberAdd", member => {
 
   console.log(member.user.username + " a rejoins le serveur !");
+  console.log(member.user.avatarUrl);
   let bvn = client.channels.get('876654952360054826');
 
   var emb = new Discord.RichEmbed()
