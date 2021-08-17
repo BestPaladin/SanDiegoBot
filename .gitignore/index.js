@@ -50,7 +50,7 @@ client.on("message", message => {
       base('Table 1').create([
       {
        "fields": {
-         "Id": message.author.user.id,
+         "Id": parseInt(message.author.id),
          "name": null,
          "age": null
        }
