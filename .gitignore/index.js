@@ -55,7 +55,7 @@ client.on("message", message => {
          "age": null
        }
       }
-      }], function(err, records) { if (err) { console.error(err); return; } records.forEach(function (record) { console.log(record.getId()); });  });
+      ], function(err, records) { if (err) { console.error(err); return; } records.forEach(function (record) { console.log(record.getId()); });  });
     default:
       break;
   }
