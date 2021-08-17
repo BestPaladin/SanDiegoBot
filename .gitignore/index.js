@@ -34,7 +34,7 @@ client.on("message", message => {
       .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
     message.channel.send({embed})
   }
-})
+});
 
 client.on("guildMemberAdd", member => {
 
