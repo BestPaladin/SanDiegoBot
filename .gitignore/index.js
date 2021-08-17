@@ -13,7 +13,7 @@ client.login(process.env.BOT_TOKEN);
 client.on("message", message => {
   switch(message.content) {
     case 'sd!ping':
-      message.channel.send("Pong.");
+      message.channel.send("Pong ! :ping_pong:");
       break;
     case 'sd!regles':
       message.delete();
