@@ -45,7 +45,7 @@ client.on("guildMemberAdd", member => {
       .setColor('#006eff')
       .setTitle('Bienvenue à l\'aéroport de San Diego City, ' + member.user.username + ' !');
   
-  if (member.user.avatarURL != NULL) emb.setThumbnail(member.user.avatarURL);
+  if (typeof member.user.avatarURL !== 'undefined') emb.setThumbnail(member.user.avatarURL);
   else emb.setThumbnail('https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png');
   
   bvn.send(emb);
