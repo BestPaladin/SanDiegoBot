@@ -36,12 +36,15 @@ client.on("message", message => {
   }
 })
 
-client.on('guildMemberAdd', async member => {
-  console.log(member.user.username + ' a rejoins le serveur')
-  
-    const embed = new Discord.RichEmbed()
-      .setTitle('Bienvenue à l\'aéroport de San Diego City, ' + member.user.username + ' !')
-      .setColor('#006eff')
-      .setThumbnail(member.user.avatarURL);
-    member.guild.channels.get('876648986356895806').send({embed}); 
+client.on("guildMemberAdd", member => {
+
+  console.log(member.user.username + " a rejoins le serveur !");
+  let bvn = client.channels.get('876654952360054826');
+
+  var emb = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .setTitle("Bienvenue "+member.user.username)
+      .setThumbnail(member.user.avatarURL)
+    bvn.send(emb);
+
 });
