@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-// var Airtable = require('airtable');
-// var base = new Airtable({apiKey: process.env.API_KEY}).base('appztkTlB3909ohOS');
+var Airtable = require('airtable');
+var base = new Airtable({apiKey: process.env.API_KEY}).base('appztkTlB3909ohOS');
 
 client.once('ready', () => {
   console.log("Le bot de SanDiego est allumé !");
