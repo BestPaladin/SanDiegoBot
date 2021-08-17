@@ -34,17 +34,16 @@ client.on("message", message => {
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send({embed})
       break;
-    case 'db!create': 
+    case 'sd!create': 
       var username = 'example'
       message.channel.send("ok");
-//       var json = 'username' + username;
-//       fs.writeFile("users/BestPaladin.json", JSON.stringify(json));
-      
-      fs.readFile('users/BestPaladin.json', function (err, data) {
-         var json = JSON.parse(data);
-         json.push('username: ' + username);
-         fs.writeFile("users/BestPaladin.json", JSON.stringify(json));
-      });
+      var json = 'username' + username;
+      fs.writeFile("users/BestPaladin.json", JSON.stringify(json));
+//       fs.readFile('users/BestPaladin.json', function (err, data) {
+//          var json = JSON.parse(data);
+//          json.push('username: ' + username);
+//          fs.writeFile("users/BestPaladin.json", JSON.stringify(json));
+//       });
       break;
     default:
       break;
