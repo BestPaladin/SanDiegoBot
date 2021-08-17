@@ -38,7 +38,11 @@ client.on("message", message => {
       var username = 'example'
       message.channel.send("ok");
       var json = 'username' + username;
-      fs.writeFile("users/BestPaladin.json", JSON.stringify(json));
+      fs.writeFile("users/BestPaladin.json", JSON.stringify(json), function (erreur) {
+        if (erreur) {
+          console.log(erreur)
+        }
+      });
 //       fs.readFile('users/BestPaladin.json', function (err, data) {
 //          var json = JSON.parse(data);
 //          json.push('username: ' + username);
