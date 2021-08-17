@@ -46,7 +46,7 @@ client.on("guildMemberAdd", member => {
   var emb = new Discord.RichEmbed()
       .setColor('#006eff')
       .setTitle('Bienvenue à l\'aéroport de San Diego City, ' + member.user.username + ' !')
-      .addField('Merci de valider le réglement dans le salon <#876442912089595956> puis de répondre à mes questions !', '\u200b');
+      .addField('Merci de valider le réglement dans le salon <#877065435827298315> puis de répondre à mes questions !', '\u200b');
   
   if (member.user.avatarURL !== 'undefined') { emb.setThumbnail(member.user.avatarURL); }
   else { emb.setThumbnail('https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png'); }
