@@ -52,17 +52,22 @@ client.on("message", message => {
 });
 
 client.on("guildMemberAdd", member => {
-
   console.log(member.user.username + " a rejoins le serveur !");
-  let bvn = client.channels.get('876654952360054826');
-
-  var emb = new Discord.RichEmbed()
+  let bvn = client.channels.get(process.env.JOIN_CHANNEL);
+  var embed_join = new Discord.RichEmbed()
       .setColor('#006eff')
-      .setTitle('Bienvenue à l\'aéroport de San Diego City, ' + member.user.username + ' !');
-  
-  if (member.user.avatarURL !== 'undefined') { emb.setThumbnail(member.user.avatarURL); }
-  else { emb.setThumbnail('https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png'); }
-  
-  bvn.send(emb);
+      .setTitle('Bienvenue à l\'aéroport de San Diego City, <@' + member.user.id + '> !')
+      .setThumbnail(member.user.avatarURL);
+  bvn.send(embed_join);
+});
 
+
+client.on("guildMemberRemove", member => {
+  console.log(member.user.username + " a quitté le serveur !");
+  let bvn = client.channels.get(process.env.LEAVE_CHANNEL);
+  var embed_leave = new Discord.RichEmbed()
+      .setColor('#006eff')
+      .setTitle('En espérant que tu as passé une bonne aventure ' + member.user.username + ' !')
+      .setThumbnail(member.user.avatarURL);
+  bvn.send(embed_leave);
 });
