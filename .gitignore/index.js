@@ -36,7 +36,7 @@ client.on("message", message => {
       break;
     case 'db!create': 
       var username = 'example'
-      fs.readFile('user/BestPaladin.json', function (err, data) {
+      fs.readFile('users/BestPaladin.json', function (err, data) {
          var json = JSON.parse(data);
          json.push('username: ' + username);
          fs.writeFile("results.json", JSON.stringify(json));
