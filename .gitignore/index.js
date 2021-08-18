@@ -80,6 +80,7 @@ client.on("guildMemberRemove", member => {
   var embed_leave = new Discord.RichEmbed()
       .setColor('#006eff')
       .setTitle('En espérant que tu as passé une bonne aventure ' + member.user.username + ' !')
+      .setDescription('Merci d\'être passé !')
       .setThumbnail(member.user.avatarURL);
   bvn.send(embed_leave);
 });
