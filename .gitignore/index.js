@@ -47,15 +47,12 @@ client.on("message", message => {
       message.channel.send(embed_help)
       break;
     case 'sd!create':
-      base('Table 1').create([
-      {
-       "fields": {
-         "Id": parseInt(message.author.id),
-         "name": null,
-         "age": null
-       }
-      }
-      ], function(err, records) { if (err) { console.error(err); return; } records.forEach(function (record) { console.log(record.getId()); });  });
+      base('Table 1').create([{
+        "fields": {
+           "Id": parseInt(message.author.id),
+           "state": 1
+        }
+      }], function(err, records) { if (err) { console.error(err); return; } records.forEach(function (record) { console.log(record.getId()); });  });
     default:
       break;
   }
