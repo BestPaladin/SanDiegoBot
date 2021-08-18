@@ -64,10 +64,9 @@ client.on("guildMemberAdd", member => {
   var embed_join = new Discord.RichEmbed()
       .setColor('#006eff')
       .setTitle('Bienvenue à l\'aéroport de San Diego City, ' + member.user.username + ' !')
-      .setDescription('Soyez le bienvenue sur le serveur discord de SanDiegoCity !\nAvant de commencer l\'aventure, merci de valider le <#877117299562270800> et de répondre à mes questions !')
+      .setDescription('Soyez le bienvenue sur le serveur discord de SanDiegoCity !\nAvant de commencer l\'aventure, merci de valider le <#877117299562270800> et de faire ta candidature RP !')
       .setThumbnail(member.user.avatarURL);
   bvn.send(embed_join);
-  member.user.send("Salut ! Avant d'entrer dans le serveur, tu dois répondre à plusieurs questions :smile: !");
 });
 
 
@@ -80,4 +79,17 @@ client.on("guildMemberRemove", member => {
       .setDescription('Merci d\'être passé !')
       .setThumbnail(member.user.avatarURL);
   bvn.send(embed_leave);
+});
+
+client.on("messageReactionAdd", (reaction, member) => {
+  
+  
+  switch(reaction.message.id) {
+    case process.env.RULES_MSG:
+      console.log(member.user.username + " a validé le réglement du serveur.");
+      break;
+    default:
+      console.log(member.user.username + " a réagit au message n°" + reaction.message.id + " !");
+      break;
+  }
 });
