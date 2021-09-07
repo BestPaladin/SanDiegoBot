@@ -77,14 +77,29 @@ client.on("message", message => {
       break;
     case 'sd!regles-gang':
       const embed_gangrules = new Discord.RichEmbed()
-        .setTitle("Réglement officiel du serveur discord")
+        .setTitle("Réglement officiel des gangs")
         .setColor('#006eff')
-        .setDescription("Lors de la navigation dans l'enceinte du serveur, le joueur s'engage à avoir lu ce réglement.")
+        .setDescription("Tous les joueurs de la session s'engagent à avoir lu ce réglement.")
         .setFooter("Merci de valider ci-dessous le réglement.")
         .addField('Chaque gang doit être formé de 1 à 4 personnes selon les rôles suivants :', '- 1 chef de gang\n- 1 bras droit\n- 2 sous-fifres')
         .addField('Lors de la mort RP, le chef de gang ou son bras droit ne doit pas reprendre le même grade.', '\u200b')
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send(embed_gangrules)
+      break;
+    case 'sd!regles-braquage':
+      const embed_braquagerules = new Discord.RichEmbed()
+        .setTitle("Réglement officiel des braquages")
+        .setColor('#006eff')
+        .setDescription("Tous les joueurs de la session s'engagent à avoir lu ce réglement.")
+        .setFooter("Merci de valider ci-dessous le réglement.")
+        .addField(':no_entry: Interdictions', '- Il est interdit de braquer quelqu’un dans les zones peuplées de la ville et dans les zones safes ( parking central, hôpital, etc…).\n- Il est interdit de braquer/kidnapper un policier ou autre dans des zones safes.\n- Tous raid du commissariat est interdit, pensez au MASS RP.\n- Vous ne pouvez pas prendre en otage un membre de votre groupe, gang ou organisation.\nIl est interdit de forcer une personne à donner l’argent de sa banque, ainsi que la forcer à vous vendre ou donner son véhicule.\nIl est possible après vol de véhicule de demander une rançon mais attention le prix doit être cohérent avec le véhicule.\nChaque joueur est limité à 1 braquage par session.')
+        .addField(':moneybag: Braquage d\'ATM', '- 5 min devant\n- 1 000$ à 5 000$\n- 1 ou 2 braqueurs avec pied de biche\n- 1 ou 2 policiers')
+        .addField(':shopping_cart: Braquage de supérette', '- 10 min dedans\n- 10 000$ à 50 000$\n- 2 ou 3 braqueurs\n- 2 ou 3 policiers')
+        .addField(':ring: Braquage de bijouterie', '- 45 min dedans\n- 500 000$ à 1 000 000$\n- 3 ou 4 braqueurs avec marteau\n- minimum 6 policiers')
+        .addField(':bank: Braquage de pacifique', '- 45 min dedans\n- 3 000 000$ à 5 000 000$\n- 3 ou 4 braqueurs\n- minimum 6 policiers')
+        .addField(':gun: Prise d\'otages', '- Rançons maximum : 15 000$ par tête\n- minimum 4 policiers')
+        .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
+      message.channel.send(embed_braquagerules)
       break;
     case 'sd!help': 
       const embed_help = new Discord.RichEmbed()
@@ -96,6 +111,7 @@ client.on("message", message => {
         .addField('sd!regles-ville', 'Affiche le réglement de San Diego City.')
         .addField('sd!regles-police', 'Affiche le réglement de la police.')
         .addField('sd!regles-gang', 'Affiche le réglement des gangs.')
+        .addField('sd!regles-braquage', 'Affiche le réglement des braquages.')
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send(embed_help)
       break;
