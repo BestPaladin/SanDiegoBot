@@ -101,6 +101,35 @@ client.on("message", message => {
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send(embed_braquagerules)
       break;
+    case 'sd!notions':
+      const embed_notions = new Discord.RichEmbed()
+        .setTitle("Liste des notions RP à connaitre")
+        .setColor('#006eff')
+        .setDescription("Tous les joueurs de la session s'engagent à connaitre les notions en RP.")
+        .addField('HRP Vocal', 'Cela veut dire que la discussion viens du joueur et non du personnage joué.')
+        .addField('RP ou ROLEPLAY', 'Jouer un rôle de la vie dans un jeu.')
+        .addField('NO FEAR RP', 'N\'avoir aucune crainte face à une arme.')
+        .addField('FREEKILL', 'Tuer un joueur sans raison.')
+        .addField('CARKILL', 'Tuer un joueur sans raison avec une voiture.')
+        .addField('METAGAMING', 'Avoir des informations HRP et les réutiliser en RP.')
+        .addField('POWERGAMING', 'Faire des choses irréalisables de la vie dans le RP.')
+        .addField('MIXE', 'Mélanger le RP avec le HRP.')
+        .addField('REVENGEKILL', 'Revenir sur une scène où on a été tué pour se venger et tuer notre meurtrier.')
+        .addField('BUNNYHOPPING', 'Sauter et courir en même temps pour aller plus vite.')
+        .addField('FORCING RP', 'Forcer quelqu\'un à faire un acte alors que plusieurs autres possibilités sont à sa disposition.')
+        .addField('FREEPUNCH', 'Se permettre de frapper quelqu’un sans aucune raison valable.')
+        .addField('MASS RP', 'Quand un session comporte pas 30 mais 5 millions de joueurs.')
+        .addField('PAIN RP', 'Le fait que votre personnage ressente la douleur.')
+        .addField('CHICKEN RUN', 'Le fait de courir dans tous les sens afin d\'esquiver les tirs d\'arme à feu.')
+        .addField('DRIVE BY', 'Consiste à tirer par la fenêtre de sa voiture.')
+        .addField('COHERENCE RP', 'Votre personnage a des origines, un âge, une appartenance, un background et une évolution. Il vous est donc obligatoire de le respecter et de vous y tenir.')
+        .addField('RACCOURCI RP', 'Tirer des conclusions hâtives avec peu d\'informations sans avoir de preuve RP. (Exemple : "C\'est une voiture jaune, donc c\'est un véhicule des Vagos !"')
+        .addField('WIN RP', 'Le Win-Rp est le fait de vouloir absolument gagner jusqu\'aller à l\'encontre du rp.')
+        .addField('FAIRPLAY', 'Accepter la défaite pour que tous le monde puissent s\'amuser , il ne faut pas oublier que c\'est un jeu et que nous somme là pour ca !')
+        .addField('STREAMHACK', 'Consiste à prendre des informations RP via le live d\'un joueur.')
+        .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
+      message.channel.send(embed_notions)
+      break;
     case 'sd!help': 
       const embed_help = new Discord.RichEmbed()
         .setTitle("Page d'aide | Bot privé SanDiego")
@@ -112,6 +141,7 @@ client.on("message", message => {
         .addField('sd!regles-police', 'Affiche le réglement de la police.')
         .addField('sd!regles-gang', 'Affiche le réglement des gangs.')
         .addField('sd!regles-braquage', 'Affiche le réglement des braquages.')
+        .addField('sd!notions', 'Affiche la liste des notions RP à connaitre.')
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send(embed_help)
       break;
