@@ -40,7 +40,7 @@ client.on("message", message => {
       const embed_cityrules = new Discord.RichEmbed()
         .setTitle("Réglement de San Diego City")
         .setColor('#006eff')
-        .setDescription("Lors de la navigation dans l'enceinte du serveur, le joueur s'engage à avoir lu ce réglement.")
+        .setDescription("Tous les joueurs de la session s'engagent à avoir lu ce réglement.")
         .setFooter("Merci de valider ci-dessous le réglement.")
         .addField(':pencil: REGLE 1 :', 'Merci de désactiver la carte lorsque vous rejoignez la session.')
         .addField(':pencil: REGLE 2 :', 'Si vous n\'avez pas acheté d\'armes à l\'armurier de la ville et que vous ne possedez pas d\'arme illégale, vous ne pouvez pas braquer sinon cela devient du give.')
@@ -56,6 +56,24 @@ client.on("message", message => {
         .addField(':pencil: REGLE 12 :', 'Si vous voter présent alors que vous n\'êtes pas là vers le commencement de la session vous recevrez un warn , si récidive vous serez privé de session pour une durée indéterminée.')
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send(embed_cityrules)
+      break;
+    case 'sd!regles-police':
+      const embed_policerules = new Discord.RichEmbed()
+        .setTitle("Réglement de la police")
+        .setColor('#006eff')
+        .setDescription("Tous les joueurs de la session s'engagent à avoir lu ce réglement.")
+        .setFooter("Merci de valider ci-dessous le réglement.")
+        .addField(':man_police_officer: REGLE 1 :', 'Vous ne pouvez conduire qu\'un seul véhicule de fonction et vous devrez toujours être accompagner d\'un coéquipier ou deux en cas de personne dangereuse.')
+        .addField(':man_police_officer: REGLE 2 :', 'Les recrues ne doivent jamais être laissées seules : il faudra toujours quelqu\'un de plus hauts gradés en leurs compagnie.')
+        .addField(':man_police_officer: REGLE 3 :', 'En fonctionm aucune mort RP ne vous sera mis (uniquement des comas). En civil par contre, vous pouvez mourrir en RP.')
+        .addField(':man_police_officer: REGLE 4 :', 'Si vous restez toujours en fonction, vous devrez alors prendre rdv chez un EMS pour des tests psychologiques : ils pourront vous mettre une mort RP en cas d\'abus.')
+        .addField(':man_police_officer: REGLE 5 :', 'Vous devez toujours respecter les hiérarchies au sein de la police. Si vous voulez monter en grade, il vous faudra effectuer une formation a l\'armée ainsi qu\'un accord du chef de la police. ')
+        .addField(':man_police_officer: REGLE 6 :', 'Pour un simple contrôle, il est interdit de venir à plus de 3 véhicules. Il est aussi interdit de sortir une arme (même pour tirer des balles en caoutchouc) pour aucune raison valable.')
+        .addField(':man_police_officer: REGLE 7 :', 'N\'étant pas sous régime autoritaire, vous vous devez de citer ses droits à la personne arrêtée.')
+        .addField(':man_police_officer: REGLE 8 :', 'Pour chaque policier, il vous faudra un accord du chef de la police pour obtenir le PPA léger. Les recrues ne pourront mettre que des PV et ne pourront pas intervenir lors d\'interventions musclées.')
+        .addField(':man_police_officer: REGLE 9 :', 'Seul les haut gradés pourront avoir un PPA lourd.')
+        .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
+      message.channel.send(embed_policerules)
       break;
     case 'sd!help': 
       const embed_help = new Discord.RichEmbed()
