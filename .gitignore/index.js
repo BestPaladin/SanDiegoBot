@@ -75,6 +75,17 @@ client.on("message", message => {
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send(embed_policerules)
       break;
+    case 'sd!regles-gang':
+      const embed_rules = new Discord.RichEmbed()
+        .setTitle("Réglement officiel du serveur discord")
+        .setColor('#006eff')
+        .setDescription("Lors de la navigation dans l'enceinte du serveur, le joueur s'engage à avoir lu ce réglement.")
+        .setFooter("Merci de valider ci-dessous le réglement.")
+        .addField('Chaque gang doit être formé de 1 à 4 personnes selon les rôles suivants :', '- 1 chef de gang\n- 1 bras droit\n- 2 sous-fifres')
+        .addField('Lors de la mort RP, le chef de gang ou son bras droit ne doit pas reprendre le même grade.', '\u200b')
+        .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
+      message.channel.send(embed_rules)
+      break;
     case 'sd!help': 
       const embed_help = new Discord.RichEmbed()
         .setTitle("Page d'aide | Bot privé SanDiego")
@@ -84,6 +95,7 @@ client.on("message", message => {
         .addField('sd!regles', 'Affiche le réglement du serveur discord.')
         .addField('sd!regles-ville', 'Affiche le réglement de San Diego City.')
         .addField('sd!regles-police', 'Affiche le réglement de la police.')
+        .addField('sd!regles-gang', 'Affiche le réglement des gangs.')
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send(embed_help)
       break;
