@@ -36,6 +36,27 @@ client.on("message", message => {
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send(embed_rules)
       break;
+    case 'sd!regles-ville':
+      const embed_cityrules = new Discord.RichEmbed()
+        .setTitle("Réglement de San Diego City")
+        .setColor('#006eff')
+        .setDescription("Lors de la navigation dans l'enceinte du serveur, le joueur s'engage à avoir lu ce réglement.")
+        .setFooter("Merci de valider ci-dessous le réglement.")
+        .addField(':pencil: REGLE 1 :', 'Merci de désactiver la carte lorsque vous rejoignez la session.')
+        .addField(':pencil: REGLE 2 :', 'Si vous n\'avez pas acheté d\'armes à l\'armurier de la ville et que vous ne possedez pas d\'arme illégale, vous ne pouvez pas braquer sinon cela devient du give.')
+        .addField(':pencil: REGLE 3 :', 'Laissez les scènes rp se produire, ne chercher pas les joueurs simplement pour vous occupez !')
+        .addField(':pencil: REGLE 4 :', 'Quand vous faites un accident ne repartez pas l\'air de rien. Appelez un dépaneur et si il faut, une ambulance.')
+        .addField(':pencil: REGLE 5 :', 'La réparation de véhicule se fait par un mécano.')
+        .addField(':pencil: REGLE 6 :', 'Quand une patrouille de gendarmerie ou police vous contrôle, ne faites pas le bandit à vous échappez tout le temps, arrêtez vous sur le coté et coopérez.')
+        .addField(':pencil: REGLE 7 :', 'Quand votre personnage recoit une balle, merci d\'appuyez sur L3 pour montrer que vous êtes blaissé (même en course poursuite).')
+        .addField(':pencil: REGLE 8 :', 'Vous devez au moins acheter un panier repas et faire le plein d\'essence en début de session sous peine de mourir de faim et de ne plus avoir d\'essence.')
+        .addField(':pencil: REGLE 9 :', 'En RP, si vous assistez à une scène ou un acte totalement interdit ou parlez en HRP, n\'en parler pas en session mais sur le discord à un admin. Le mot HRP en session n\'est pas apprécié par certains joueur !')
+        .addField(':pencil: REGLE 10 :', 'L\'attaque sur personne connue ou riche est interdite si il n\'y a pas d\'officier de police en ville.')
+        .addField(':pencil: REGLE 11 :', 'Un panier repas doit être acheté obligatoirement lors de chaque session au moment desiré :panier repas 500$')
+        .addField(':pencil: REGLE 12 :', 'Si vous voter présent alors que vous n\'êtes pas là vers le commencement de la session vous recevrez un warn , si récidive vous serez privé de session pour une durée indéterminée.')
+        .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
+      message.channel.send(embed_cityrules)
+      break;
     case 'sd!help': 
       const embed_help = new Discord.RichEmbed()
         .setTitle("Page d'aide | Bot privé SanDiego")
@@ -43,6 +64,7 @@ client.on("message", message => {
         .addField('sd!help', 'Affiche la page d\'aide du bot.')
         .addField('sd!ping', 'Vérifie l\'état du bot.')
         .addField('sd!regles', 'Affiche le réglement du serveur discord.')
+        .addField('sd!regles-ville', 'Affiche le réglement de San Diego City.')
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send(embed_help)
       break;
