@@ -23,7 +23,7 @@ client.on("message", message => {
         .setDescription("Bonjour à tous et merci d'être là.")
         .setColor('#006eff')
         .addField('Tout d\'abord je vais vous parler de nous, San Diego City est né d\'une amitier honnête et sincère ce que l\'on recherche ici sur ce serveur.\nVous serez pris au sérieux et on sera à votre écoute que cela soit sur leur rp ou même en dehors notre bute est de créer une communauter solide sur de bonne base.', '\u200b')
-        .addField('Les 10 commandements du rp :', '1.Dans le respect du joueras\n2.En cas de problème à un fonda tu parleras\n3.Quand un Dieu parles, écouter tu feras\n4.En scène tu ne parleras pas en HRP\n5.Les règles tu suivras\n6.Une conduite exemplaires tu auras\n7.Ton métier tu feras\n8.Pas de Winrp tu feras\n9.Des mort rp justifiées tu feras\n10.La hiérarchie tu respecteras')
+        .addField('Les 10 commandements du rp :', '1.Dans le respect tu joueras\n2.Si problème à un admin tu parleras\n3.Dieu tu écouteras\n4.Tu ne parleras pas en HRP\n5.Les règles tu suivras\n6.Une conduite exemplaires tu auras\n7.Ton métier tu feras\n8.Winrp tu feras pas\n9.Des mort RP justifiées tu feras\n10.La hiérarchie tu respecteras')
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send(embed_intro)
       break;
