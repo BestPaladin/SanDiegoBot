@@ -92,12 +92,12 @@ client.on("message", message => {
         .setColor('#006eff')
         .setDescription("Tous les joueurs de la session s'engagent à avoir lu ce réglement.")
         .setFooter("Merci de valider ci-dessous le réglement.")
-        .addField(':no_entry: Interdictions', '- Il est interdit de braquer quelqu’un dans les zones peuplées de la ville et dans les zones safes ( parking central, hôpital, etc…).\n- Il est interdit de braquer/kidnapper un policier ou autre dans des zones safes.\n- Tous raid du commissariat est interdit, pensez au MASS RP.\n- Vous ne pouvez pas prendre en otage un membre de votre groupe, gang ou organisation.\nIl est interdit de forcer une personne à donner l’argent de sa banque, ainsi que la forcer à vous vendre ou donner son véhicule.\nIl est possible après vol de véhicule de demander une rançon mais attention le prix doit être cohérent avec le véhicule.\nChaque joueur est limité à 1 braquage par session.')
+        .addField(':no_entry: Interdictions', '- Il est interdit de braquer quelqu’un dans les zones peuplées de la ville et dans les zones safes (parking central, hôpital, etc…).\n- Il est interdit de braquer/kidnapper un policier ou autre dans des zones safes.\n- Tous raid du commissariat est interdit, pensez au MASS RP.\n- Vous ne pouvez pas prendre en otage un membre de votre groupe, gang ou organisation.\n- Il est interdit de forcer une personne à donner l’argent de sa banque, ainsi que la forcer à vous vendre ou donner son véhicule.\n- Il est possible après vol de véhicule de demander une rançon mais attention le prix doit être cohérent avec le véhicule.\n- Chaque joueur est limité à 1 braquage par session.')
         .addField(':moneybag: Braquage d\'ATM', '- 5 min devant\n- 1 000$ à 5 000$\n- 1 ou 2 braqueurs avec pied de biche\n- 1 ou 2 policiers')
         .addField(':shopping_cart: Braquage de supérette', '- 10 min dedans\n- 10 000$ à 50 000$\n- 2 ou 3 braqueurs\n- 2 ou 3 policiers')
-        .addField(':ring: Braquage de bijouterie', '- 45 min dedans\n- 500 000$ à 1 000 000$\n- 3 ou 4 braqueurs avec marteau\n- minimum 6 policiers')
-        .addField(':bank: Braquage de pacifique', '- 45 min dedans\n- 3 000 000$ à 5 000 000$\n- 3 ou 4 braqueurs\n- minimum 6 policiers')
-        .addField(':gun: Prise d\'otages', '- Rançons maximum : 15 000$ par tête\n- minimum 4 policiers')
+        .addField(':ring: Braquage de bijouterie', '- 45 min dedans\n- 500 000$ à 1 000 000$\n- 3 ou 4 braqueurs avec marteau\n- Minimum 6 policiers')
+        .addField(':bank: Braquage de pacifique', '- 45 min dedans\n- 3 000 000$ à 5 000 000$\n- 3 ou 4 braqueurs\n- Minimum 6 policiers')
+        .addField(':gun: Prise d\'otages', '- Rançons maximum : 15 000$ par tête\n- Minimum 4 policiers')
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send(embed_braquagerules)
       break;
