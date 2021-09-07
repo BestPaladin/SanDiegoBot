@@ -65,7 +65,7 @@ client.on("message", message => {
         .setFooter("Merci de valider ci-dessous le réglement.")
         .addField(':man_police_officer: REGLE 1 :', 'Vous ne pouvez conduire qu\'un seul véhicule de fonction et vous devrez toujours être accompagner d\'un coéquipier ou deux en cas de personne dangereuse.')
         .addField(':man_police_officer: REGLE 2 :', 'Les recrues ne doivent jamais être laissées seules : il faudra toujours quelqu\'un de plus hauts gradés en leurs compagnie.')
-        .addField(':man_police_officer: REGLE 3 :', 'En fonctionm aucune mort RP ne vous sera mis (uniquement des comas). En civil par contre, vous pouvez mourrir en RP.')
+        .addField(':man_police_officer: REGLE 3 :', 'En fonction, aucune mort RP ne vous sera mis (uniquement des comas). En civil par contre, vous pouvez mourrir en RP.')
         .addField(':man_police_officer: REGLE 4 :', 'Si vous restez toujours en fonction, vous devrez alors prendre rdv chez un EMS pour des tests psychologiques : ils pourront vous mettre une mort RP en cas d\'abus.')
         .addField(':man_police_officer: REGLE 5 :', 'Vous devez toujours respecter les hiérarchies au sein de la police. Si vous voulez monter en grade, il vous faudra effectuer une formation a l\'armée ainsi qu\'un accord du chef de la police. ')
         .addField(':man_police_officer: REGLE 6 :', 'Pour un simple contrôle, il est interdit de venir à plus de 3 véhicules. Il est aussi interdit de sortir une arme (même pour tirer des balles en caoutchouc) pour aucune raison valable.')
