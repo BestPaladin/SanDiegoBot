@@ -17,6 +17,16 @@ client.on("message", message => {
     case 'sd!ping':
       message.channel.send("Pong ! :ping_pong:");
       break;
+    case 'sd!introduction':
+      const embed_intro = new Discord.RichEmbed()
+        .setTitle("Introduction")
+        .setDescription("Bonjour à tous et merci d'être là.")
+        .setColor('#006eff')
+        .addField('Tout d\'abord je vais vous parler de nous, San Diego City est né d\'une amitier honnête et sincère ce que l\'on recherche ici sur ce serveur.\nVous serez pris au sérieux et on sera à votre écoute que cela soit sur leur rp ou même en dehors notre bute est de créer une communauter solide sur de bonne base.', '\u200b')
+        .addField('Les 10 commandements du rp :', '1.Dans le respect du joueras\n2.En cas de problème à un fonda tu parleras\n3.Quand un Dieu parles, écouter tu feras\n4.En scène tu ne parleras pas en HRP\n5.Les règles tu suivras\n6.Une conduite exemplaires tu auras\n7.Ton métier tu feras\n8.Pas de Winrp tu feras\n9.Des mort rp justifiées tu feras\n10.La hiérarchie tu respecteras')
+        .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
+      message.channel.send(embed_intro)
+      break;
     case 'sd!regles':
       const embed_rules = new Discord.RichEmbed()
         .setTitle("Réglement officiel du serveur discord")
@@ -142,6 +152,7 @@ client.on("message", message => {
         .addField('sd!regles-gang', 'Affiche le réglement des gangs.')
         .addField('sd!regles-braquage', 'Affiche le réglement des braquages.')
         .addField('sd!notions', 'Affiche la liste des notions RP à connaitre.')
+        .addField('sd!introduction', 'Affiche l\'introduction.')
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send(embed_help)
       break;
