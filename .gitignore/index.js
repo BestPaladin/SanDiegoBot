@@ -103,7 +103,7 @@ client.on("guildMemberRemove", member => {
   bvn.send(embed_leave);
 });
 
-client.on("messageReactionAdd", (reaction, member) => {
+/*client.on("messageReactionAdd", (reaction, member) => {
   
   
   switch(reaction.message.id) {
@@ -114,4 +114,4 @@ client.on("messageReactionAdd", (reaction, member) => {
       console.log(member.user.username + " a réagit au message n°" + reaction.message.id + " !");
       break;
   }
-});
+});*/
