@@ -83,6 +83,7 @@ client.on("message", message => {
         .addField('sd!ping', 'Vérifie l\'état du bot.')
         .addField('sd!regles', 'Affiche le réglement du serveur discord.')
         .addField('sd!regles-ville', 'Affiche le réglement de San Diego City.')
+        .addField('sd!regles-police', 'Affiche le réglement de la police.')
         .setThumbnail("https://cdn.discordapp.com/icons/876435753121488906/c3795293709c2238efe5fb7d14c3544d.png");
       message.channel.send(embed_help)
       break;
